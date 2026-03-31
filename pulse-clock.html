@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>脉冲时钟</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --accent: #22d3ee;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 20% 20%, #1e293b, var(--bg));
+      color: var(--text);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .clock {
+      width: min(88vw, 360px);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(160deg, #1f2937, var(--card));
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      box-shadow:
+        0 0 0 0 rgba(34, 211, 238, 0.45),
+        0 25px 45px rgba(0, 0, 0, 0.45);
+      animation: pulse 1s ease-in-out infinite;
+    }
+
+    .time {
+      font-size: clamp(2rem, 9vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-shadow: 0 0 20px rgba(34, 211, 238, 0.45);
+    }
+
+    .date {
+      margin-top: 8px;
+      text-align: center;
+      font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+      color: #cbd5e1;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow:
+          0 0 0 0 rgba(34, 211, 238, 0.45),
+          0 25px 45px rgba(0, 0, 0, 0.45);
+      }
+      70% {
+        transform: scale(1.02);
+        box-shadow:
+          0 0 0 30px rgba(34, 211, 238, 0),
+          0 25px 45px rgba(0, 0, 0, 0.45);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow:
+          0 0 0 0 rgba(34, 211, 238, 0),
+          0 25px 45px rgba(0, 0, 0, 0.45);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="clock" aria-label="脉冲时钟">
+    <div>
+      <div id="time" class="time">00:00:00</div>
+      <div id="date" class="date">--</div>
+    </div>
+  </div>
+
+  <script>
+    const timeEl = document.getElementById('time');
+    const dateEl = document.getElementById('date');
+
+    function formatNum(num) {
+      return String(num).padStart(2, '0');
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const h = formatNum(now.getHours());
+      const m = formatNum(now.getMinutes());
+      const s = formatNum(now.getSeconds());
+      timeEl.textContent = `${h}:${m}:${s}`;
+
+      const dateText = now.toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long'
+      });
+      dateEl.textContent = dateText;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
