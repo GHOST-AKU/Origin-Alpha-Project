@@ -11,6 +11,10 @@ import math
 import time
 from datetime import datetime
 
+BAR_WIDTH = 24
+PULSE_HZ = 0.75
+FRAME_INTERVAL = 0.1
+
 
 def render_pulse_bar(width: int = 24, phase: float = 0.0) -> str:
     """根据相位生成脉冲条。"""
@@ -26,12 +30,16 @@ def run_pulse_clock() -> None:
 
     start = time.monotonic()
     while True:
+        frame_start = time.monotonic()
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        elapsed = time.monotonic() - start
-        pulse = render_pulse_bar(phase=elapsed * 2 * math.pi * 0.8)
+        elapsed = frame_start - start
+        phase = elapsed * 2 * math.pi * PULSE_HZ
+        pulse = render_pulse_bar(width=BAR_WIDTH, phase=phase)
         line = f"\r🕒 {now}  |  {pulse}"
         print(line, end="", flush=True)
-        time.sleep(0.1)
+        remaining = FRAME_INTERVAL - (time.monotonic() - frame_start)
+        if remaining > 0:
+            time.sleep(remaining)
 
 
 if __name__ == "__main__":
