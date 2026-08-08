@@ -13,7 +13,7 @@ next_gate: approve-fiction-template-plan
 
 ## 当前状态
 
-项目已完成仓库清理、工作区分层和长期规范确认；创作资料目录已采用工具无关的 `creative/` 命名，正在规划小说文本与图表基础设施，尚未进入具体作品创作阶段。
+项目已完成仓库清理、工作区分层和长期规范确认；项目根目录已确定为 Obsidian 的标准打开范围，正在规划小说文本与图表基础设施，尚未进入具体作品创作阶段。
 
 ## 已完成
 
@@ -23,8 +23,9 @@ next_gate: approve-fiction-template-plan
 - 已批准混合目录结构。
 - 已批准 Git 项目容器、创作资料区、网站层和其他层的分工。
 - 已建立 `PROJECT_MANUAL.md` 初版，定义目录、编号、命名、状态和工具分工。
-- `PROJECT_MANUAL.md v0.2` 已获用户确认并正式生效。
+- `PROJECT_MANUAL.md v0.3` 已获用户确认并正式生效。
 - 已将工具绑定的 `vault/` 改名为工具无关的 `creative/`。
+- 已确认项目根目录作为 Obsidian 的标准打开范围，根目录 `.obsidian/` 已加入忽略规则。
 
 ## 尚未完成
 

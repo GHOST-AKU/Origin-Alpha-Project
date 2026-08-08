@@ -6,6 +6,7 @@
 - [x] `OA-TASK-0002` 批准基础目录结构
 - [x] `OA-TASK-0003` 确认 Git 项目容器、创作资料区、网站层和其他层的分工
 - [x] `OA-TASK-0004` 建立并确认 `PROJECT_MANUAL.md`
+- [x] `OA-TASK-0008` 确认项目根目录作为 Obsidian 的标准打开范围
 
 ## 进行中
 

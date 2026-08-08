@@ -23,7 +23,7 @@ Origin Alpha Project 是一个长期、多媒介、规模较大的艺术创作�
 - 采用分层结构：根目录放项目控制文件，`creative/` 管理创作知识与作品，`sites/` 管理网站，`other/` 管理实验和其他项目。
 - 使用 `assets/` 管理公共素材，`releases/` 管理阶段发布物。
 - `archive-temp/` 继续作为与当前计划无关内容的临时归档区。
-- Git 仓库是整个项目容器；`creative/` 是普通创作资料目录，可由 Obsidian 作为 Vault 打开。
+- Git 仓库是整个项目容器，项目根目录也可以作为 Obsidian Vault 打开；`creative/` 是其中的普通创作资料目录。
 - `creative/` 承载小说、创作知识、图表和轻量创作资料，不绑定特定软件。
 - `sites/` 承载配套网站，`other/` 承载实验、工具和暂未归类的其他项目。
 - `PROJECT_MANUAL.md` 是项目长期规范说明书，统一目录、编号、状态、命名和工具分工。
