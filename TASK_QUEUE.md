@@ -4,12 +4,12 @@
 
 - [x] `OA-TASK-0001` 确认项目是大型、多媒介、长期艺术创作计划
 - [x] `OA-TASK-0002` 批准基础目录结构
-- [x] `OA-TASK-0003` 确认 Git 项目容器、Obsidian Vault、网站层和其他层的分工
-- [x] `OA-TASK-0004` 建立并确认 `PROJECT_MANUAL.md v0.1`
+- [x] `OA-TASK-0003` 确认 Git 项目容器、创作资料区、网站层和其他层的分工
+- [x] `OA-TASK-0004` 建立并确认 `PROJECT_MANUAL.md`
 
 ## 进行中
 
-- [ ] `OA-TASK-0005` 规划 Vault 内的小说文本与图表模板
+- [ ] `OA-TASK-0005` 规划创作资料区内的小说文本与图表模板
   - 交互：是
   - 阶段：基础设施准备
 

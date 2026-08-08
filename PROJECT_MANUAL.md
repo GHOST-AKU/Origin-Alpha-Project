@@ -1,10 +1,12 @@
 # Origin Alpha Project 项目规范说明书
 
-版本：`v0.1`
+版本：`v0.2`
 
 状态：已确认的基础规范，具体创作内容尚未开始。
 
-确认日期：`2026-08-07`
+确认日期：`2026-08-09`
+
+`v0.2` 变更：将工具绑定的 `vault/` 改名为工具无关的 `creative/`；Obsidian 只是打开该目录的软件。
 
 本文档是 Origin Alpha Project 的长期工作手册，用来统一项目目录、编号、文件命名、状态、工具分工和变更方式。它不规定具体故事内容，只规定项目如何被组织和维护。
 
@@ -32,7 +34,7 @@ Origin-Alpha-Project/
   DECISIONS.md            决策记录
   STATE_SNAPSHOT.md       状态快照
 
-  vault/                  Obsidian Vault：小说与创作知识
+  creative/               创作资料：小说、设定、研究与图表
   sites/                  配套网站和网页工程
   other/                  实验、工具、原型和其他项目
   assets/                 公共素材
@@ -42,9 +44,9 @@ Origin-Alpha-Project/
 
 ### 1.1 单一来源规则
 
-- 正式小说正文的来源在 `vault/`。
-- 已确认的跨作品设定来源在 `vault/02_canon/`。
-- 某一作品的局部设定来源在 `vault/03_works/` 对应作品目录。
+- 正式小说正文的来源在 `creative/`。
+- 已确认的跨作品设定来源在 `creative/02_canon/`。
+- 某一作品的局部设定来源在 `creative/03_works/` 对应作品目录。
 - 网站可以使用已发布内容，但不能成为小说正文或正典设定的唯一来源。
 - 同一内容如果需要出现在多个媒介中，应通过稳定 ID 和发布记录关联，不随意复制出多个“真版本”。
 
@@ -125,7 +127,7 @@ inbox → outline → draft → review → canonical → released
 
 - 用于写作、知识连接、双向链接和 Canvas 图表。
 - 主要内容保存在本地 Markdown、Canvas 和附件文件中。
-- `vault/` 是它的工作范围，不代表整个仓库。
+- Obsidian 可以把 `creative/` 作为 Vault 打开；Vault 是软件对该普通文件夹的称呼，不是项目目录的固有类型。
 
 ### Notion
 
@@ -190,7 +192,7 @@ inbox → outline → draft → review → canonical → released
 
 创建新内容前：
 
-1. 判断它属于 `vault`、`sites`、`other`、`assets` 还是 `releases`。
+1. 判断它属于 `creative`、`sites`、`other`、`assets` 还是 `releases`。
 2. 判断它是全局对象还是作品内对象。
 3. 分配稳定 ID。
 4. 写入 front matter。

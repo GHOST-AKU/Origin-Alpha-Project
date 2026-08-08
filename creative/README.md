@@ -1,8 +1,8 @@
-# Origin Alpha 创作 Vault
+# Origin Alpha 创作资料区
 
-这是 Origin Alpha Project 的 Obsidian Vault，负责小说、创作知识、研究笔记和创作图表。
+`creative/` 负责保存小说、创作知识、研究笔记和创作图表。它是普通项目目录，不绑定特定软件。
 
-它不是整个项目仓库。网站源文件、工具和其他工程放在仓库根目录的其他层中。
+需要使用 Obsidian 时，可以直接把本目录作为 Obsidian Vault 打开。
 
 ## 规则
 
