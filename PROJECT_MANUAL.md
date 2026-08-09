@@ -1,12 +1,12 @@
 # Origin Alpha Project 项目规范说明书
 
-版本：`v0.3`
+版本：`v0.6`
 
 状态：已确认的基础规范，具体创作内容尚未开始。
 
 确认日期：`2026-08-09`
 
-`v0.3` 变更：确认整个项目根目录可以作为 Obsidian Vault 打开；`creative/` 是创作内容区，不是 Vault 的边界。
+`v0.6` 变更：将全部稳定 ID 前缀从 `OA-*` 统一迁移为 `OAP-*`，与正式缩写一致。
 
 本文档是 Origin Alpha Project 的长期工作手册，用来统一项目目录、编号、文件命名、状态、工具分工和变更方式。它不规定具体故事内容，只规定项目如何被组织和维护。
 
@@ -47,6 +47,8 @@ Origin-Alpha-Project/
 - 正式小说正文的来源在 `creative/`。
 - 已确认的跨作品设定来源在 `creative/02_canon/`。
 - 某一作品的局部设定来源在 `creative/03_works/` 对应作品目录。
+- 作品专属的人物、时间线、研究和图表也保存在该作品目录，不在顶层另建第二份真相源。
+- `creative/02_canon/` 只接收已经用户确认、并且跨作品成立的内容；`unconfirmed` 内容不得放入。
 - 网站可以使用已发布内容，但不能成为小说正文或正典设定的唯一来源。
 - 同一内容如果需要出现在多个媒介中，应通过稳定 ID 和发布记录关联，不随意复制出多个“真版本”。
 
@@ -54,36 +56,48 @@ Origin-Alpha-Project/
 
 所有可长期引用的对象都应有稳定 ID。ID 只使用 ASCII 大写字母、数字和连字符；ID 一旦分配，不因改名而改变，也不重复使用。
 
-统一前缀：`OA`，代表 Origin Alpha。
+统一编号前缀为 `OAP`，与 `Origin Alpha Project` 的唯一正式缩写一致。
 
 | 对象 | 格式 | 示例 |
 |---|---|---|
-| 作品 | `OA-W###` | `OA-W001` |
-| 全局正典人物 | `OA-CAN-CHAR-###` | `OA-CAN-CHAR-001` |
-| 全局正典地点 | `OA-CAN-LOC-###` | `OA-CAN-LOC-001` |
-| 全局正典组织 | `OA-CAN-ORG-###` | `OA-CAN-ORG-001` |
-| 全局正典事件 | `OA-CAN-EVT-###` | `OA-CAN-EVT-001` |
-| 作品内人物 | `OA-W###-CHAR-###` | `OA-W001-CHAR-001` |
-| 作品内地点 | `OA-W###-LOC-###` | `OA-W001-LOC-001` |
-| 章节 | `OA-W###-CH-###` | `OA-W001-CH-001` |
-| 场景 | `OA-W###-SC-###` | `OA-W001-SC-001` |
-| 公共素材 | `OA-ASSET-####` | `OA-ASSET-0001` |
-| 网站 | `OA-SITE-###` | `OA-SITE-001` |
-| 任务 | `OA-TASK-####` | `OA-TASK-0001` |
-| 决策 | `OA-DEC-####` | `OA-DEC-0001` |
-| 发布物 | `OA-REL-x.y.z` | `OA-REL-0.1.0` |
+| 作品 | `OAP-W###` | `OAP-W001` |
+| 全局正典人物 | `OAP-CAN-CHAR-###` | `OAP-CAN-CHAR-001` |
+| 全局正典地点 | `OAP-CAN-LOC-###` | `OAP-CAN-LOC-001` |
+| 全局正典组织 | `OAP-CAN-ORG-###` | `OAP-CAN-ORG-001` |
+| 全局正典事件 | `OAP-CAN-EVT-###` | `OAP-CAN-EVT-001` |
+| 全局正典术语 | `OAP-CAN-TERM-###` | `OAP-CAN-TERM-001` |
+| 作品内人物 | `OAP-W###-CHAR-###` | `OAP-W001-CHAR-001` |
+| 作品内地点 | `OAP-W###-LOC-###` | `OAP-W001-LOC-001` |
+| 作品内组织 | `OAP-W###-ORG-###` | `OAP-W001-ORG-001` |
+| 作品内事件 | `OAP-W###-EVT-###` | `OAP-W001-EVT-001` |
+| 作品内术语 | `OAP-W###-TERM-###` | `OAP-W001-TERM-001` |
+| 章节 | `OAP-W###-CH-###` | `OAP-W001-CH-001` |
+| 场景 | `OAP-W###-SC-###` | `OAP-W001-SC-001` |
+| 项目级研究 | `OAP-RES-####` | `OAP-RES-0001` |
+| 作品内研究 | `OAP-W###-RES-###` | `OAP-W001-RES-001` |
+| 作品内视觉作品 | `OAP-W###-VIS-###` | `OAP-W001-VIS-001` |
+| 项目级图表 | `OAP-DIA-####` | `OAP-DIA-0001` |
+| 作品内图表 | `OAP-W###-DIA-###` | `OAP-W001-DIA-001` |
+| 外部来源 | `OAP-SRC-####` | `OAP-SRC-0001` |
+| 公共素材 | `OAP-ASSET-####` | `OAP-ASSET-0001` |
+| 网站 | `OAP-SITE-###` | `OAP-SITE-001` |
+| 任务 | `OAP-TASK-####` | `OAP-TASK-0001` |
+| 决策 | `OAP-DEC-####` | `OAP-DEC-0001` |
+| 发布物 | `OAP-REL-x.y.z` | `OAP-REL-0.1.0` |
 
 ### 2.1 全局对象与作品对象
 
-- 会被多个作品共同引用的对象，使用 `OA-CAN-*`。
-- 只在单个作品中成立的对象，使用 `OA-W###-*`。
+- 会被多个作品共同引用的对象，使用 `OAP-CAN-*`。
+- 只在单个作品中成立的对象，使用 `OAP-W###-*`。
 - 作品内对象以后升级为全局对象时，建立新 ID，并在旧对象中记录迁移关系；不要直接改写旧 ID 的含义。
 
 ## 3. 文件命名
 
+- 完整品牌名必须写作 `Origin Alpha Project`，唯一正式缩写是 `OAP`。在正文、标题、网页元数据、无障碍标签和对外文案中，不得使用 `Origin Alpha` 或 `OA` 指代品牌或项目。
+- `OAP` 可用于明确需要缩写的文字、紧凑视觉标记和稳定 ID 前缀。
 - 目录名、代码路径、网站工程文件名使用英文和数字。
 - 面向创作阅读的文件名可以使用中文。
-- 可长期引用的创作文件建议以 ID 开头，例如：`OA-W001-CH-001-第一章.md`。
+- 可长期引用的创作文件建议以 ID 开头，例如：`OAP-W001-CH-001-第一章.md`。
 - 网站和代码文件使用英文 `kebab-case` 或项目既有的统一风格。
 - 不使用 `最终版`、`最终最终版`、`new2` 等不稳定命名。
 - 版本由 Git 提交和发布记录管理，不靠不断改文件名制造版本。
@@ -94,12 +108,12 @@ Origin-Alpha-Project/
 
 ```yaml
 ---
-id: OA-W001-CH-001
+id: OAP-W001-CH-001
 type: chapter
 title: 第一章
 status: draft
 canon_status: unconfirmed
-work: OA-W001
+work: OAP-W001
 created: 2026-08-07
 updated: 2026-08-07
 related_ids: []
@@ -107,19 +121,24 @@ source_ids: []
 ---
 ```
 
-允许的 `status`：
+允许的 `status`（生产阶段）：
 
 ```text
-inbox → outline → draft → review → canonical → released
+inbox → outline → draft → review → released
 ```
 
-补充分支：
+补充状态：
 
-- `non-canon`：实验或平行版本，不属于正式设定。
 - `archived`：保留历史，但不再作为当前工作内容。
 - `deprecated`：被新对象取代，旧 ID 仍然保留。
 
-`status` 表示生产阶段；`canon_status` 表示它是否属于正式设定。两者不能混为一谈。
+`canon_status` 只允许：
+
+```text
+unconfirmed / canonical / non-canon
+```
+
+`status` 表示生产阶段；`canon_status` 表示它是否属于正式设定。两者不能混为一谈，也不得用 `status: canonical` 或 `status: non-canon`。
 
 ## 5. Obsidian、Notion、Git 和 Codex 的分工
 
@@ -147,6 +166,25 @@ inbox → outline → draft → review → canonical → released
 - 可以在用户授权后设计目录、模板、检查规则、索引和整理方案。
 - 不默认代写用户的日常创作内容。
 - 不得静默改变正典、目录架构、编号体系或媒介关系。
+
+## 5.1 创作区工作路径
+
+```text
+creative/
+  00_inbox/             未分类灵感
+  01_project/           尚未成为正典的项目级方向与跨作品探索
+  02_canon/             已确认的跨作品正典
+  03_works/             作品内容分区与就地起始模板；当前尚无真实作品
+  04_research/          项目级共享研究
+  05_boards/            项目级跨作品白板与图表
+  06_attachments/       服务于创作笔记的轻量附件
+```
+
+- 第一部真实作品成立时，再根据它已确认的媒介和内容需要决定目录形式；当前不创建占位作品或作品骨架目录。
+- `attachments` 意为“附件”，`boards` 意为“白板/图表”。数字前缀只用于保持顺序。
+- 只服务于某部作品的附件放在该作品的 `10_attachments/`；跨作品或项目级轻量附件才放在顶层 `06_attachments/`。
+- 模板就地放在它所服务的目录内；模板文件不是真实内容，不参与正典或发布。
+- 音频、影像和互动媒介的专用 ID 与模板，等媒介关系和首阶段目标确认后再定义。
 
 ## 6. 图表规范
 
@@ -209,4 +247,4 @@ inbox → outline → draft → review → canonical → released
 
 ## 9. 当前状态
 
-本说明书只建立规范，不代表已经有具体世界观、人物、章节或网站内容。任何示例 ID 都是格式示例，不是实际创作事实。
+本说明书只建立规范，不代表已经有具体世界观、人物或章节。任何示例 ID 都是格式示例，不是实际创作事实。

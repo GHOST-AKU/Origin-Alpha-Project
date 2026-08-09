@@ -1,6 +1,6 @@
-# Origin Alpha static preview
+# Origin Alpha Project static preview
 
-- Project ID: `OA-SITE-001`
+- Project ID: `OAP-SITE-001`
 - Type: static HTML/CSS
 - Entry: `index.html`
 - External dependencies: none

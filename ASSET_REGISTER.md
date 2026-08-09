@@ -4,12 +4,12 @@
 
 ## 登记字段
 
-- `asset_id`：唯一编号，例如 `OA-A-0001`
+- `asset_id`：唯一编号，例如 `OAP-ASSET-0001`
 - `name`：素材名称
 - `type`：image / audio / video / font / document / other
 - `path`：仓库内路径
 - `owner_work`：所属作品编号；公共素材填写 `shared`
-- `status`：inbox / draft / review / canonical / released / archived
+- `status`：inbox / outline / draft / review / released / archived / deprecated
 - `source`：原创、授权、公共领域、外部来源或生成记录
 - `rights_note`：版权和使用限制
 - `created_at`：创建日期
